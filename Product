@@ -1,0 +1,22 @@
+class Product  // Определение класса Product (Товар)
+{
+    // Автоматические свойства Name, Price и Description для хранения данных о товаре
+    public string Name { get; set; }  
+    public decimal Price { get; set; }  
+    public string Description { get; set; }  
+
+    // Конструктор класса Product, который задаёт значения Name, Price и Description при создании товара
+    public Product(string name, decimal price, string description)
+    {
+        Name = name;  
+        Price = price;  
+        Description = description;  
+    }
+
+    // Метод ShowInfo выводит информацию о товаре на экран
+    public void ShowInfo()
+    {
+        // Форматированная строка, выводящая название, цену и описание товара
+        Console.WriteLine($"Название: {Name}, Цена: {Price} руб, Описание: {Description}");
+    }
+}
