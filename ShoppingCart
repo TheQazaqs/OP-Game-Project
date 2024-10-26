@@ -1,27 +1,21 @@
-using System;
-using System.ComponentModel;
-using System.Security.Cryptography.X509Certificates;
-
-namespace Product 
+class ShoppingCart
 {
-    public class Product 
+    private List<Product> _products = new List<Product>();
+
+    public void AddProduct(Product product)
     {
-         static void Main(string[] args)
-        public string Name { get; set; }
-        public decimal Price { get; set; }
-        public string Description { get; set }
-
-        public Product(string name, decimal price, string description)
-        {
-            Name = name;
-            Price = price;
-            Description = description;
-        }
-
-        public void ShowInfo()
-        {
-            Console.WriteLine($"Название: {Name}, Цена: {Price} тг, Описание: {Description}");
-        }
+        _products.Add(product); 
+        Console.WriteLine($"{product.Name} добавлен в корзину.");
     }
-    
+
+    public void ShowCart()
+    {
+        Console.WriteLine("Ваша корзина:"); 
+        foreach (var product in _products)
+        {
+            product.ShowInfo();
+        }
+        decimal totalPrice = _products.Sum(p => p.Price);
+        Console.WriteLine($"Общая сумма: {totalPrice} руб.");
+    }
 }
