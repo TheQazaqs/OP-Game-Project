@@ -7,7 +7,7 @@ class Store
     public Store()
     {
         
-        Products.Add(new Product("Телефон", 10000, "Смартфон с большим экраном"));
+        Products.Add(new Product("Телефон", 100000, "Смартфон с большим экраном"));
         Products.Add(new Product("Ноутбук", 250000, "Мощный игровой ноутбук"));
         Products.Add(new Product("Наушники", 70000, "Беспроводные наушники"));
     }
