@@ -16,6 +16,6 @@ class ShoppingCart
             product.ShowInfo();
         }
         decimal totalPrice = _products.Sum(p => p.Price);
-        Console.WriteLine($"Общая сумма: {totalPrice} руб.");
+        Console.WriteLine($"Общая сумма: {totalPrice} KZT.");
     }
 }
